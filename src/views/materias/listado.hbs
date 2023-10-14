@@ -1,0 +1,30 @@
+<div class="container p-4">
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Listado de materias</h3>
+            </div>
+            <div class="col-sm-6">
+                <a href="/materias/agregar" class="btn btn-success d-block text-white">Agregar materia</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 mt-4">
+        <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each materias}}
+            <tr>
+                <td>{{codigo}}</td>
+                <td>{{nombre}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    </div>
+</div>

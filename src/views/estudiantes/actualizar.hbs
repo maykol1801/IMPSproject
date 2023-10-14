@@ -1,28 +1,21 @@
 <div class="container p-4">
     <div class="row justify-content-center">
-        <h1>Actualizar estudiante</h1>
+        <h1>Actualizar profesor</h1>
     </div>
     <div class="row justify-content-center mt-4">
        <div class="col-md-4">
-        <form action="/estudiantes/actualizar/{{estudiante.id}}" method="POST">
+        <form action="/profesores/actualizar/{{profesor.id}}" method="POST">
             <div class="form-group">
-                <input type="text" class="form-control" name="nombre" placeholder="Nombre del estudiante" value="{{estudiante.nombre}}" autofocus />
+                <input type="text" class="form-control" name="nombre" placeholder="Nombre del profesor" value="{{profesor.nombre}}" autofocus />
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="apellido" placeholder="Apellido del estudiante" value="{{estudiante.apellido}}" />
+                <input type="text" class="form-control" name="apellido" placeholder="Apellido del profesor" value="{{profesor.apellido}}" />
             </div>
             <div class="form-group">
-                <input type="email" class="form-control" name="email" placeholder="Correo del estudiante" value="{{estudiante.email}}" />
+                <input type="email" class="form-control" name="email" placeholder="Correo del profesor" value="{{profesor.email}}" />
             </div>
             <div class="form-group">
-                <select class="form-control" name="idcarrera">
-                    {{#each lstCarreras}}
-                    <option value="{{idcarrera}}" {{#ifCond idcarrera '==' estudiante.idcarrera}}selected{{/ifCond}}>{{carrera}}</option>
-                     {{/each}}
-                </select>
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" name="usuario" placeholder="Usuario del estudiante" value="{{estudiante.usuario}}" />
+                <input type="text" class="form-control" name="usuario" placeholder="Usuario del profesor" value="{{profesor.usuario}}" />
             </div>
             <div class="form-group">
                 <button class="btn btn-success btn-block">Actualizar</button>
